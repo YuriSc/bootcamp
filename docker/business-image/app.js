@@ -2,9 +2,12 @@ const http = require('http');
 const os = require('os');
 var request = require('request');
 const util = require('util');
+var fs = require('fs');
 const enhancedRequest = util.promisify(request);
 const TIME_SERVICE_HOST = process.env.TIME_SERVICE_HOST || "time-service:8080"
 
+
+var buildInfo = fs.readFileSync('/build.info', 'utf8');
 
 console.log("Business server starting...");
 
@@ -13,6 +16,7 @@ var handler = async function(request, response) {
     var result = { time: new Date(),
         hostAddress: os.networkInterfaces().eth0[0].address,
         host: os.hostname(),
+	buildInfo: buildInfo,
         timeServiceHost: TIME_SERVICE_HOST
     };
     response.setHeader('Content-Type', 'application/json');
