@@ -16,7 +16,5 @@ spec:
     spec:
       containers:
         - name: time-deployment
-          image: "docker-dev-local.billing.ru/bootcamp/business-image"
+          image: "yurisc/bootcamp:business"
           imagePullPolicy: Always
-      imagePullSecrets:
-        - name: docker-dev
