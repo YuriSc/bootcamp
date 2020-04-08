@@ -12,12 +12,12 @@ spec:
           - path: /$
             backend:
               serviceName: business-service
-              servicePort: 8080
+              servicePort: 80
           - path: /business
             backend:
               serviceName: business-service
-              servicePort: 8080
+              servicePort: 80
           - path: /time
             backend:
               serviceName: time-service
-              servicePort: 8080
+              servicePort: 80

@@ -4,7 +4,7 @@ var fs = require('fs');
  
 var buildInfo = fs.readFileSync('/build.info', 'utf8');
 
-console.log("Time server starting...");
+console.log("Time server started");
 
 var handler = function(request, response) {
   console.log("Received request from " + request.connection.remoteAddress);

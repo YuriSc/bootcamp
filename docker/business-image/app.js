@@ -4,12 +4,12 @@ var request = require('request');
 const util = require('util');
 var fs = require('fs');
 const enhancedRequest = util.promisify(request);
-const TIME_SERVICE_HOST = process.env.TIME_SERVICE_HOST || "time-service:8080"
+const TIME_SERVICE_HOST = process.env.TIME_SERVICE_HOST || "time"
 
 
 var buildInfo = fs.readFileSync('/build.info', 'utf8');
 
-console.log("Business server starting...");
+console.log("Business server started");
 
 var handler = async function(request, response) {
     console.log("Received request from " + request.connection.remoteAddress);

@@ -17,4 +17,7 @@ spec:
       containers:
         - name: time-deployment
           image: "yurisc/bootcamp:business"
+          env:
+            - name: TIME_SERVICE_HOST
+              value: "time-service"
           imagePullPolicy: Always
