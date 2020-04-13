@@ -15,6 +15,5 @@ spec:
         app.kubernetes.io/name: time-deployment
     spec:
       containers:
-        - name: time-deployment
+        - name: time
           image: "yurisc/bootcamp:time"
-          imagePullPolicy: Always

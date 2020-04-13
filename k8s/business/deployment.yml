@@ -15,9 +15,8 @@ spec:
         app.kubernetes.io/name: business-deployment
     spec:
       containers:
-        - name: time-deployment
+        - name: business
           image: "yurisc/bootcamp:business"
           env:
             - name: TIME_SERVICE_HOST
               value: "time-service"
-          imagePullPolicy: Always
