@@ -1,3 +1,3 @@
-docker login docker-dev-local.nexign.com/bootcamp/time-image
-docker tag time-image docker-dev-local.nexign.com/bootcamp/time-image
-docker push docker-dev-local.nexign.com/bootcamp/time-image
+docker login yurisc/bootcamp:time
+docker tag time-image yurisc/bootcamp:time
+docker push yurisc/bootcamp:time
