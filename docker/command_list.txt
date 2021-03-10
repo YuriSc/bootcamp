@@ -1,0 +1,44 @@
+Add 28800 port in VM port forwarding settings
+Add port forwarding from host machine on port 2222 to guest machine to port 22
+#################################################################################
+docker images
+docker pull node:12.16.1
+
+docker build --help
+docker build -t time-image .
+
+
+docker ps --help
+docker ps -a
+
+docker run --help
+docker run --name time-container -p 28800:8080 -it time-image
+docker rm --help
+docker rm time-container
+docker run --name time-container -p 28800:8080 -d time-image
+
+docker logs --help
+docker logs time-container
+docker logs -f time-container
+
+docker exec --help
+docker exec -it time-container bash
+
+docker stop --help
+docker stop time-container
+
+docker push --help
+
+docker tag --help
+docker tag time-image {your_repo}/time
+
+docker login --help
+docker login {your_repo}/time
+
+docker push --help
+docker push {your_repo}/time
+
+docker rmi --help
+
+
+
