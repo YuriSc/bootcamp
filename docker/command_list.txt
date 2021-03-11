@@ -1,6 +1,8 @@
 Add 28800 port in VM port forwarding settings
 Add port forwarding from host machine on port 2222 to guest machine to port 22
 #################################################################################
+sudo service docker start
+
 docker images
 docker pull node:12.16.1
 
