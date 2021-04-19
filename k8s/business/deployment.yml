@@ -15,6 +15,8 @@ spec:
       labels:
         app.kubernetes.io/name: business-deployment
     spec:
+      imagePullSecrets:
+        - name: bootcamp-secret
       containers:
         - name: business
           image: "yurisc/bootcamp:business"
