@@ -15,6 +15,8 @@ spec:
       labels:
         app.kubernetes.io/name: time-deployment
     spec:
+      imagePullSecrets:
+        - name: bootcamp-secret
       containers:
         - name: time
           image: "yurisc/bootcamp:time"
